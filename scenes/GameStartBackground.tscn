@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://djml58ctvgcsq"]
+
+[ext_resource type="Script" path="res://scripts/GameStartBackground.cs" id="1_rpfq3"]
+[ext_resource type="Texture2D" uid="uid://dyt1ettnlpqbf" path="res://assets/main_menu/background/background_layer_1.png" id="2_sx831"]
+[ext_resource type="Texture2D" uid="uid://mphq4xup40no" path="res://assets/main_menu/background/background_layer_2.png" id="3_rv820"]
+[ext_resource type="Texture2D" uid="uid://bdgay0wo52ilu" path="res://assets/main_menu/background/background_layer_3.png" id="4_tc6rc"]
+
+[node name="GameStartBackground" type="Node2D"]
+script = ExtResource("1_rpfq3")
+
+[node name="ParallaxLayer" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(1150, 0)
+autoscroll = Vector2(-100, 0)
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(3.60625, 3.63333)
+texture = ExtResource("2_sx831")
+centered = false
+
+[node name="ParallaxLayer2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(1150, 0)
+autoscroll = Vector2(-120, 0)
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="ParallaxLayer2"]
+scale = Vector2(3.60625, 3.62222)
+texture = ExtResource("3_rv820")
+centered = false
+
+[node name="ParallaxLayer3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(1150, 0)
+autoscroll = Vector2(-160, 0)
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="ParallaxLayer3"]
+scale = Vector2(3.6125, 3.64444)
+texture = ExtResource("4_tc6rc")
+centered = false

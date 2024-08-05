@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfutofwmubjoq"]
+
+[ext_resource type="Script" path="res://scripts/GUI.cs" id="1_4iiyo"]
+[ext_resource type="PackedScene" uid="uid://cyka314p0w61r" path="res://scenes/LifeBar.tscn" id="1_n0uc4"]
+[ext_resource type="PackedScene" uid="uid://bmlr1crqpmkjg" path="res://scenes/EnergyBar.tscn" id="2_53jtq"]
+[ext_resource type="PackedScene" uid="uid://dww7nd61oser5" path="res://scenes/BombCounter.tscn" id="3_k4cf1"]
+[ext_resource type="PackedScene" uid="uid://dkkwj35nqoj0m" path="res://scenes/EmeraldCounter.tscn" id="4_jc3ye"]
+
+[node name="GUI" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 63.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_4iiyo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Bars" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LifeBar" parent="HBoxContainer/Bars" instance=ExtResource("1_n0uc4")]
+layout_mode = 2
+
+[node name="EnergyBar" parent="HBoxContainer/Bars" instance=ExtResource("2_53jtq")]
+layout_mode = 2
+
+[node name="Counters" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="BombCounter" parent="HBoxContainer/Counters" instance=ExtResource("3_k4cf1")]
+layout_mode = 2
+
+[node name="EmeraldCounter" parent="HBoxContainer/Counters" instance=ExtResource("4_jc3ye")]
+layout_mode = 2

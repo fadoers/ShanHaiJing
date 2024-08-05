@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmlr1crqpmkjg"]
+
+[ext_resource type="PackedScene" uid="uid://28apyal8ju7a" path="res://scenes/bar.tscn" id="1_inimy"]
+[ext_resource type="Texture2D" uid="uid://dufrt11ajijkv" path="res://assets/gui_test/label_EP.png" id="2_th71h"]
+[ext_resource type="FontFile" uid="uid://dfpombovrj5j8" path="res://assets/font/Comfortaa-Bold.ttf" id="3_bqgq0"]
+[ext_resource type="Texture2D" uid="uid://cdy7ik37hohh" path="res://assets/gui_test/energy_bar_bg.png" id="4_f41b8"]
+[ext_resource type="Texture2D" uid="uid://cdm1nusu6p2yb" path="res://assets/gui_test/energy_bar_fill.png" id="5_qakdn"]
+
+[sub_resource type="FontVariation" id="FontVariation_8jr1p"]
+base_font = ExtResource("3_bqgq0")
+spacing_bottom = 12
+
+[node name="EnergyBar" instance=ExtResource("1_inimy")]
+
+[node name="Count" parent="." index="0"]
+theme_override_constants/margin_left = 20
+
+[node name="Background" parent="Count" index="0"]
+custom_minimum_size = Vector2(80, 40)
+
+[node name="Title" parent="Count/Background" index="0"]
+offset_bottom = 40.0
+texture = ExtResource("2_th71h")
+
+[node name="Number" parent="Count/Background" index="1"]
+offset_right = 70.0
+offset_bottom = 45.0
+theme_override_fonts/font = SubResource("FontVariation_8jr1p")
+theme_override_font_sizes/font_size = 18
+text = "14"
+
+[node name="Gauge" parent="." index="1"]
+value = 30.0
+texture_under = ExtResource("4_f41b8")
+texture_progress = ExtResource("5_qakdn")

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dww7nd61oser5"]
+
+[ext_resource type="PackedScene" uid="uid://6hb2b45jwp11" path="res://scenes/counter.tscn" id="1_870ke"]
+
+[node name="BombCounter" instance=ExtResource("1_870ke")]

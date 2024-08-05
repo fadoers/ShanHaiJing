@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkkwj35nqoj0m"]
+
+[ext_resource type="PackedScene" uid="uid://6hb2b45jwp11" path="res://scenes/counter.tscn" id="1_hcrje"]
+[ext_resource type="Texture2D" uid="uid://d1ysoi8cbbq61" path="res://assets/gui_test/emeralds_icon.png" id="2_tpdbh"]
+
+[node name="EmeraldCounter" instance=ExtResource("1_hcrje")]
+
+[node name="Icon" parent="Background" index="0"]
+offset_left = -83.0
+offset_top = -35.0
+offset_right = -3.0
+offset_bottom = 45.0
+texture = ExtResource("2_tpdbh")
